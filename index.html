@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumina Plans — Interactive Pricing</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <p class="eyebrow">Simple, transparent pricing</p>
+        <h1>Pick the plan that grows with you</h1>
+        <p class="lede">
+          Switch billing, filter by category, and compare features — all of it
+          updates live in the browser.
+        </p>
+      </header>
+
+      <div class="controls">
+        <div class="billing" role="group" aria-label="Billing period">
+          <span class="billing-label" id="label-monthly">Monthly</span>
+          <button
+            type="button"
+            class="toggle"
+            id="billing-toggle"
+            role="switch"
+            aria-checked="false"
+            aria-labelledby="label-monthly label-yearly"
+          >
+            <span class="toggle-knob"></span>
+          </button>
+          <span class="billing-label" id="label-yearly">
+            Yearly <span class="save-pill">Save 20%</span>
+          </span>
+        </div>
+
+        <div class="filters" role="group" aria-label="Plan category">
+          <button type="button" class="filter-btn is-active" data-filter="all">
+            All
+          </button>
+          <button type="button" class="filter-btn" data-filter="basic">
+            Basic
+          </button>
+          <button type="button" class="filter-btn" data-filter="premium">
+            Premium
+          </button>
+        </div>
+      </div>
+
+      <p class="filter-status" id="filter-status" aria-live="polite"></p>
+
+      <section class="grid" id="plans-grid" aria-label="Pricing plans"></section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
